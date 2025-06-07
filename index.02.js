@@ -1,6 +1,9 @@
 // manually giving context
 
 import { GoogleGenAI } from "@google/genai";
+import dotenv from "dotenv";
+dotenv.config();
+
 const ai = new GoogleGenAI({ apiKey: `${process.env.GEMINI_API}` })
 
 async function main() {
