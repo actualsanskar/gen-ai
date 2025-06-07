@@ -8,14 +8,16 @@ const chat = ai.chats.create({
     model: "gemini-2.0-flash",
     history: []
 })
-console.log(response.text);
+
 
 
 async function main() {
     const userQuestion = readlinesync.question("write prompt -->");
-    await chat.sendMessage({
+    const response = await chat.sendMessage({
         message: userQuestion,
     });
+    console.log(response.text);
+    
     main();
 }
 
